@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>근자감 根自感 — 괴근식물 가게</title>
+<meta name="description" content="괴근식물에 빠진 친구 둘이 하는 가게. 아데니움, 아가베 티타노타, 투구선인장, 파키포디움. 전 품목 1개씩, 보내는 개체를 직접 찍습니다.">
+<meta name="theme-color" content="#0c0c0b">
+<link rel="canonical" href="https://rootconfidence.co.kr/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="근자감 根自感">
+<meta property="og:title" content="근자감 根自感 — 느리게 커도, 아래에 쌓는 것들만.">
+<meta property="og:description" content="괴근식물에 빠진 친구 둘이 하는 가게. 전 품목 1개씩, 화분에 심긴 채로 보냅니다.">
+<meta property="og:url" content="https://rootconfidence.co.kr/">
+<meta property="og:image" content="https://rootconfidence.co.kr/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"근자감 根自感","url":"https://rootconfidence.co.kr/","image":"https://rootconfidence.co.kr/img/og.jpg","description":"괴근식물 가게","sameAs":["https://smartstore.naver.com/gogoroot","https://www.instagram.com/root.confidence/","https://www.threads.com/@root.confidence","https://blog.naver.com/familybusiness-"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Noto+Serif+KR:wght@300;400;600&family=Space+Mono&display=swap">
+<style>
+/* Layout: a herbarium sheet in the dark — specimen plates with mono catalogue labels, one long scroll, photos stay grey until you look closely */
+:root{
+  --ink:#0c0c0b;        /* page ground, warm black */
+  --sheet:#141413;      /* raised panels */
+  --line:#2a2926;       /* hairlines */
+  --bone:#ebe8e2;       /* primary text */
+  --ash:#8f8c86;        /* secondary text */
+  --moss:#a7ad8f;       /* single quiet accent: dried-leaf green, used only on meaning tags */
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --italic:"Cormorant Garamond","Times New Roman",serif;
+  --mono:"Space Mono",ui-monospace,Menlo,monospace;
+  --gutter:clamp(16px,4vw,56px);
+  --max:1240px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--serif);font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:1px solid var(--bone);outline-offset:4px}
+img{display:block;max-width:100%;height:auto}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gutter)}
+.mono{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash);font-weight:400}
+.it{font-family:var(--italic);font-style:italic}
+.rule{border:0;border-top:1px solid var(--line);margin:0}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--ink) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:22px;width:auto;filter:invert(1)}
+.brand span{font-size:15px;letter-spacing:.35em;font-weight:400}
+.nav{display:flex;gap:28px;align-items:center}
+.nav a.mono:hover{color:var(--bone)}
+.store-btn{font-family:var(--mono);font-size:11px;letter-spacing:.16em;border:1px solid var(--bone);padding:9px 14px;white-space:nowrap;transition:background .2s,color .2s}
+.store-btn:hover{background:var(--bone);color:var(--ink)}
+@media (max-width:760px){.nav a.mono{display:none}.brand span{font-size:13px;letter-spacing:.25em}}
+
+/* hero */
+.hero{padding-block:clamp(40px,8vw,96px) clamp(48px,8vw,110px)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,72px);align-items:end}
+.hero h1{font-weight:300;font-size:clamp(38px,6.4vw,88px);line-height:1.18;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.hero h1 .line{display:block;animation:rise 1.1s cubic-bezier(.2,.7,.1,1) both}
+.hero h1 .line:nth-child(2){animation-delay:.12s}
+@keyframes rise{from{transform:translateY(.35em);opacity:.25}to{transform:none;opacity:1}}
+.hero .sub{margin:28px 0 0;font-size:clamp(16px,1.6vw,19px);color:var(--ash);max-width:30em}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.ghost{font-family:var(--mono);font-size:11px;letter-spacing:.16em;padding:9px 14px;border:1px solid var(--line);color:var(--ash);transition:border-color .2s,color .2s}
+.ghost:hover{border-color:var(--bone);color:var(--bone)}
+.plate{position:relative;margin:0}
+.plate img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter 1.2s ease}
+.plate:hover img{filter:grayscale(0)}
+.plate figcaption{display:flex;justify-content:space-between;gap:12px;padding-top:14px}
+.hero .meta-l{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:28px}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero .plate{order:-1;max-width:520px}}
+
+/* manifesto */
+.manifesto{padding-block:clamp(64px,10vw,140px);border-top:1px solid var(--line)}
+.manifesto .wrap{display:grid;grid-template-columns:220px 1fr;gap:clamp(24px,5vw,80px)}
+.manifesto blockquote{margin:0;font-size:clamp(22px,2.8vw,36px);line-height:1.6;max-width:22em;text-wrap:pretty}
+.manifesto blockquote b{font-weight:600}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);margin-top:clamp(40px,6vw,72px);border:1px solid var(--line)}
+.facts div{background:var(--ink);padding:22px 20px}
+.facts strong{display:block;font-weight:400;font-size:17px;margin-top:8px}
+@media (max-width:760px){.manifesto .wrap{grid-template-columns:1fr}.facts{grid-template-columns:1fr}}
+
+/* section heads */
+.sec{padding-block:clamp(64px,9vw,120px);border-top:1px solid var(--line)}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,48px)}
+.head h2{margin:0;font-weight:300;font-size:clamp(26px,3.2vw,40px);letter-spacing:-.01em}
+.head p{margin:0;color:var(--ash);font-size:15px;max-width:34em}
+
+/* plants */
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,2.4vw,36px) clamp(14px,2vw,28px)}
+@media (max-width:1000px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.spec{display:flex;flex-direction:column;min-width:0}
+.spec .ph{position:relative;overflow:hidden;background:var(--sheet)}
+.spec img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:grayscale(1) brightness(.92);transform:scale(1.001);transition:filter .7s ease,transform 1.2s cubic-bezier(.2,.7,.1,1)}
+.spec:hover img{filter:grayscale(0) brightness(1);transform:scale(1.035)}
+.spec .no{position:absolute;left:10px;top:10px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--bone);mix-blend-mode:difference}
+.spec .name{font-size:clamp(15px,1.4vw,18px);font-weight:400;margin:14px 0 2px;line-height:1.4}
+.spec .lat{font-size:15px;color:var(--ash);line-height:1.3}
+.spec .line{font-size:13px;color:var(--ash);margin:10px 0 0;line-height:1.6}
+.tag{display:inline-block;align-self:flex-start;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--moss);border:1px solid color-mix(in srgb,var(--moss) 45%,transparent);padding:4px 8px;margin-top:12px}
+.spec .go{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--ash);margin-top:12px}
+.spec:hover .go{color:var(--bone)}
+.spec.out{opacity:.45}
+.spec.out .no::after{content:" · 품절"}
+
+/* meaning */
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,1fr);gap:1px;background:var(--line);border:1px solid var(--line);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.mean{background:var(--ink);padding:28px 24px 26px;scroll-snap-align:start;display:flex;flex-direction:column;gap:14px;min-height:280px;transition:background .3s}
+.mean:hover{background:var(--sheet)}
+.mean .k{font-size:clamp(26px,2.6vw,34px);font-weight:400;letter-spacing:-.01em}
+.mean .k small{font-family:var(--mono);font-size:11px;color:var(--moss);letter-spacing:.1em;margin-right:6px;vertical-align:.4em}
+.mean q{quotes:none;font-size:16px;line-height:1.7}
+.mean .for{font-size:13px;color:var(--ash);margin-top:auto}
+.mean .to{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--ash);border-top:1px solid var(--line);padding-top:12px}
+.mean:hover .to{color:var(--bone)}
+
+/* care */
+.care{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
+.care div{padding:26px 22px 8px 0;border-right:1px solid var(--line)}
+.care div+div{padding-left:22px}
+.care div:last-child{border-right:0}
+.care h3{margin:10px 0 8px;font-weight:400;font-size:22px}
+.care p{margin:0;color:var(--ash);font-size:15px}
+.care-note{margin:clamp(36px,5vw,56px) 0 0;font-size:clamp(20px,2.4vw,30px);line-height:1.55;max-width:24em}
+.care-note b{font-weight:600}
+@media (max-width:820px){.care{grid-template-columns:1fr 1fr}.care div:nth-child(2){border-right:0}.care div:nth-child(3){padding-left:0}.care div:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:480px){.care{grid-template-columns:1fr}.care div{border-right:0!important;padding-left:0!important;border-top:1px solid var(--line)}.care div:first-child{border-top:0}}
+
+/* journal cards */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+@media (max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.cards{grid-template-columns:1fr}}
+.card{position:relative;display:flex;flex-direction:column;aspect-ratio:4/5;background:var(--sheet);border:1px solid var(--line);overflow:hidden;min-width:0}
+.card .src{position:absolute;left:18px;top:16px;z-index:2;display:flex;gap:10px;align-items:center}
+.card.text{padding:56px 22px 22px;justify-content:space-between}
+.card.text h3{margin:0;font-weight:400;font-size:clamp(20px,2vw,26px);line-height:1.45;text-wrap:balance}
+.card.text p{margin:0;color:var(--ash);font-size:14px}
+.card.text .foot{display:flex;justify-content:space-between;align-items:end;gap:12px}
+.card.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1);transition:filter .7s,transform 1.2s}
+.card.photo:hover img{filter:grayscale(0);transform:scale(1.03)}
+.card.photo .cap{position:relative;z-index:2;margin-top:auto;padding:60px 20px 20px;background:linear-gradient(to top,color-mix(in srgb,var(--ink) 92%,transparent),transparent);font-size:15px;line-height:1.55}
+.card.photo .src .mono{color:var(--bone)}
+.card .arr{font-family:var(--mono);font-size:12px;color:var(--ash);transition:transform .3s,color .3s}
+.card:hover .arr{transform:translate(3px,-3px);color:var(--bone)}
+.card.text:hover{border-color:color-mix(in srgb,var(--bone) 40%,var(--line))}
+
+/* shop */
+.shop{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(28px,5vw,72px);align-items:center}
+.shop .plate img{aspect-ratio:3/2}
+.shop p{margin:0 0 18px;font-size:17px;max-width:30em}
+.ship{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--line)}
+.ship li{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ash)}
+.ship li span:first-child{font-family:var(--mono);font-size:10px;letter-spacing:.14em;padding-top:4px}
+@media (max-width:820px){.shop{grid-template-columns:1fr}}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding-block:clamp(56px,8vw,96px) 40px}
+footer .big{font-size:clamp(28px,4.4vw,56px);font-weight:300;line-height:1.35;margin:0;text-wrap:balance}
+footer .big .it{color:var(--ash)}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.colophon{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:64px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="근자감 처음으로"><img src="/img/logo.png" alt=""><span>근자감</span></a>
+    <nav class="nav">
+      <a class="mono" href="#plants">식물</a>
+      <a class="mono" href="#meaning">의미</a>
+      <a class="mono" href="#journal">기록</a>
+      <a class="mono" href="#shop">가게</a>
+      <a class="store-btn" href="https://smartstore.naver.com/gogoroot?utm_source=site&amp;utm_medium=web&amp;utm_campaign=home_nav" target="_blank" rel="noopener">스토어 ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="meta-l"><span class="mono">根自感 · Root.Confidence</span><span class="mono">Caudex &amp; Cactus · Seoul</span></div>
+        <h1><span class="line">느리게 커도,</span><span class="line">아래에 쌓는 것들만.</span></h1>
+        <p class="sub">괴근식물에 빠진 친구 둘이 하는 가게입니다. 전 품목 1개씩, 직접 찍은 사진으로 팝니다.</p>
+        <div class="ctas">
+          <a class="store-btn" href="#plants">지금 있는 식물 보기</a>
+          <a class="ghost" href="#meaning">의미로 고르기</a>
+        </div>
+      </div>
+      <figure class="plate">
+        <img src="/img/somalense.jpg" width="860" height="1290" alt="검은 화분에 심긴 아데니움 소말렌스. 병 모양 밑동 위로 줄기가 곧게 올라가고 꼭대기에만 잎이 있다.">
+        <figcaption><span class="mono">Plate 01 — Adenium</span><span class="mono it" style="text-transform:none;letter-spacing:0;font-size:15px">somalense</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="manifesto">
+    <div class="wrap">
+      <span class="mono">Root Confidence</span>
+      <div>
+        <blockquote>근자감. 다들 아시는 그 근자감 맞습니다. 근거 없는 자신감이요. 저희는 한자만 바꿔 썼어요. <b>根自感</b>, 뿌리에서 오는 자신감. 식물을 시작할 때 필요한 건 지식보다 그냥 해보는 마음이라서요.</blockquote>
+        <div class="facts">
+          <div><span class="mono">Stock</span><strong>전 품목 1개씩</strong></div>
+          <div><span class="mono">Photo</span><strong>보내는 그 개체를 찍습니다</strong></div>
+          <div><span class="mono">Shipping</span><strong>화분에 심긴 채로</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="plants">
+    <div class="wrap">
+      <div class="head">
+        <h2>지금 있는 식물</h2>
+        <p>사진 속 개체가 그대로 갑니다. 누르면 스마트스토어로 이동해요.</p>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="meaning">
+    <div class="wrap">
+      <div class="head">
+        <h2>의미로 고르기</h2>
+        <p>선물할 때 한 줄이 필요하다면. 식물마다 사는 방식이 하나씩 있어요.</p>
+      </div>
+      <div class="rail" id="rail"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="care">
+    <div class="wrap">
+      <div class="head">
+        <h2>안 하는 게 대부분입니다</h2>
+        <p>괴근식물 관리, 네 줄이면 됩니다. 품종별 자세한 내용은 상세페이지에 있어요.</p>
+      </div>
+      <div class="care">
+        <div><span class="mono">Water</span><h3>물</h3><p>흙이 속까지 완전히 마른 뒤에 흠뻑. 애매하면 하루 더 기다리세요. 겨울엔 거의 끊습니다.</p></div>
+        <div><span class="mono">Light</span><h3>빛</h3><p>밝게 두시되 한여름 땡볕은 가려주세요. 볕은 2~3주에 걸쳐 조금씩 늘립니다.</p></div>
+        <div><span class="mono">Winter</span><h3>겨울</h3><p>5~10°C 아래로만 안 떨어지게. 마른 추위는 견디는데 젖은 추위는 못 견딥니다.</p></div>
+        <div><span class="mono">Air</span><h3>바람</h3><p>통풍은 그냥 필수라고 보시면 됩니다. 창문 한 뼘이면 충분해요.</p></div>
+      </div>
+      <p class="care-note">물을 잊어서 죽는 일은 거의 없어요. <b>챙겨주다 뿌리가 물러서</b> 갑니다.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="journal">
+    <div class="wrap">
+      <div class="head">
+        <h2>기록</h2>
+        <p>블로그와 인스타그램에 쓰는 것들. 누르면 원문으로 갑니다.</p>
+      </div>
+      <div class="cards" id="cards"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="shop">
+    <div class="wrap shop">
+      <figure class="plate">
+        <img src="/img/box_wide.jpg" width="1600" height="1063" alt="크라프트 박스 위에 검은 로고 테이프와 CAUDEX PLANTS 카드가 붙어 있다.">
+        <figcaption><span class="mono">Package</span><span class="mono">Kraft / Logo tape</span></figcaption>
+      </figure>
+      <div>
+        <span class="mono">The Shop</span>
+        <h2 style="font-weight:300;font-size:clamp(26px,3.2vw,40px);margin:14px 0 22px;letter-spacing:-.01em">둘이서 하는 가게</h2>
+        <p>농장에서 뿌리 없이 들여온 걸 화장실에서 살려보던 게 시작이었습니다. 지금도 크게 다르지 않아요. 재고는 전 품목 1개씩이고, 팔리면 품절입니다.</p>
+        <p>크라프트 박스에 담고, 흔들리지 않게 고정해서 보냅니다.</p>
+        <ul class="ship">
+          <li><span>배송</span><span>우체국 택배, 주문 후 2~3일 안에 출고. 한여름·한겨울엔 날씨 보고 발송일을 조율합니다.</span></li>
+          <li><span>손상</span><span>수령 후 24시간 안에 사진 주시면 배송 중 손상은 바로 처리해 드려요.</span></li>
+          <li><span>문의</span><span>스마트스토어 톡톡이나 인스타그램 DM으로 주세요.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="big">죽일까 봐 못 들이셨다면, <span class="it">근거 없는 자신감이면 충분해요.</span></p>
+    <div class="links">
+      <a class="store-btn" href="https://smartstore.naver.com/gogoroot?utm_source=site&amp;utm_medium=web&amp;utm_campaign=home_footer" target="_blank" rel="noopener">스마트스토어 ↗</a>
+      <a class="ghost" href="https://www.instagram.com/root.confidence/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a class="ghost" href="https://www.threads.com/@root.confidence" target="_blank" rel="noopener">Threads ↗</a>
+      <a class="ghost" href="https://blog.naver.com/familybusiness-" target="_blank" rel="noopener">Blog ↗</a>
+    </div>
+    <div class="colophon">
+      <span class="mono">근자감 根自感 / Your green, your way</span>
+      <span class="mono">© 2026 Root.Confidence</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const UTM = "utm_source=site&utm_medium=web&utm_campaign=home_plants";
+const store = no => `https://smartstore.naver.com/gogoroot/products/${no}?${UTM}`;
+
+const plants = [
+  {slug:"somalense",  no:"13372501866", label:"Adenium · 05",     name:"아데니움 소말렌스 실생", lat:"Adenium somalense",          m:"자립",    line:"위로 자라는 사막의 장미."},
+  {slug:"dwarf",      no:"13372442088", label:"Agave · 01",       name:"아가베 티타노타 드워프", lat:"Agave titanota",              m:"단련",    line:"편하게 키우면 오히려 폼이 풀어집니다."},
+  {slug:"godzilla",   no:"13736263023", label:"Ariocarpus · 06",  name:"고질라 목단",           lat:"Ariocarpus cv. 'Godzilla'",   m:"버팀",    line:"가시를 세우는 대신, 돌이 되기로 한 겁니다."},
+  {slug:"kabuto1",    no:"13754498594", label:"Astrophytum · 07", name:"슈퍼 가부토 No.01",      lat:"Astrophytum asterias",        m:"무장해제", line:"찌르는 대신, 별을 덮었습니다."},
+  {slug:"gracilius",  no:"13736279684", label:"Pachypodium · 07", name:"파키포디움 그락실리우스", lat:"Pachypodium gracilius",       m:"시간",    line:"몸통은 시간으로만 굵어집니다."},
+  {slug:"blackskin",  no:"12635072563", label:"Adenium · 04",     name:"아데니움 블랙스킨",      lat:"Adenium, black skin",         m:"휴식",    line:"잎이 다 떨어져도 놀라지 마세요."},
+  {slug:"kabuto2",    no:"13754492558", label:"Astrophytum · 08", name:"슈퍼 가부토 No.02",      lat:"Astrophytum asterias",        m:"무장해제", line:"같은 품종인데, 같은 얼굴이 없습니다."},
+  {slug:"pachypodioides", no:"12634972467", label:"Euphorbia · 03", name:"유포르비아 파키포디오이데스", lat:"Euphorbia pachypodioides", m:"고유", line:"세상에서 7.8 제곱킬로미터.", out:true},
+];
+
+const meanings = [
+  {k:"무장해제", q:"찌르는 대신, 별을 덮었습니다.",                        f:"선인장이 무서운 사람, 첫 식물", p:"슈퍼 가부토", no:"13754498594"},
+  {k:"시간",    q:"몸통은 시간으로만 굵어집니다. 돈으로 붙일 수가 없어요.", f:"시작하는 사람, 독립·창업",      p:"파키포디움 그락실리우스", no:"13736279684"},
+  {k:"버팀",    q:"가시를 세우는 대신, 돌이 되기로 한 겁니다.",            f:"힘든 시기를 지나는 사람, 승진", p:"고질라 목단", no:"13736263023"},
+  {k:"자립",    q:"씨앗에서 시작한 것만 저 밑동을 자기 힘으로 만듭니다.",  f:"취업·합격·자취 시작",          p:"아데니움 소말렌스", no:"13372501866"},
+  {k:"단련",    q:"버티면서 단단해진 것만 형태가 남습니다.",              f:"운동·수험·새 도전",            p:"아가베 티타노타 드워프", no:"13372442088"},
+  {k:"휴식",    q:"잎이 다 떨어져도 놀라지 마세요. 쉬는 중입니다.",        f:"번아웃, 퇴사·이직",            p:"아데니움 블랙스킨", no:"12635072563"},
+  {k:"고유",    q:"남의 이름을 얻었지만, 실은 혼자서 도착한 형태입니다.",  f:"자기 길을 가는 사람, 개업",     p:"유포르비아 파키포디오이데스", no:"12634972467"},
+];
+
+const journal = [
+  {type:"text",  src:"Blog",      date:"2026.09.08", t:"2개 사서 1개 죽인 그락실리우스, 살아남은 쪽 이야기", d:"파키포디움 그락실리우스 · 키우기 기록", url:"https://blog.naver.com/familybusiness-/224405211458"},
+  {type:"photo", src:"Instagram", img:"/img/extra_p1_plate3.jpg", cap:"위에서 보면 능이 여덟 갈래. 슈퍼 가부토 No.01", url:"https://www.instagram.com/root.confidence/"},
+  {type:"text",  src:"Blog",      date:"2026.04.15", t:"가성비 끝판왕 테이블 식물, 슈퍼 가부토를 추천하는 이유", d:"아스트로피툼 · 입문 추천", url:"https://blog.naver.com/familybusiness-/224253796836"},
+  {type:"photo", src:"Instagram", img:"/img/extra_p7_plate2.jpg", cap:"한 시즌 내내 들여다봐도 어제 그 모습. 티타노타 드워프", url:"https://www.instagram.com/root.confidence/"},
+  {type:"text",  src:"Blog",      date:"2026.03.15", t:"식물을 죽이지 않는 방법은 좋은 식물을 사는 거", d:"입문 · 고르는 법", url:"https://blog.naver.com/familybusiness-/224217540522"},
+  {type:"photo", src:"Threads",   img:"/img/extra_p5_plate2.jpg", cap:"같은 집안인데 누구는 옆으로, 누구는 위로.", url:"https://www.threads.com/@root.confidence"},
+];
+
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+document.getElementById("grid").innerHTML = plants.map(p => `
+  <a class="spec${p.out ? " out" : ""}" href="${store(p.no)}" target="_blank" rel="noopener" aria-label="${esc(p.name)} 스토어에서 보기">
+    <div class="ph"><img src="/img/${p.slug}.jpg" width="860" height="1290" loading="lazy" alt="${esc(p.name)}"><span class="no">${esc(p.label)}</span></div>
+    <div class="name">${esc(p.name)}</div>
+    <div class="lat it">${esc(p.lat)}</div>
+    <span class="tag">MEANING · ${esc(p.m)}</span>
+    <p class="line">${esc(p.line)}</p>
+    <span class="go">${p.out ? "품절 · 재입고 알림은 스토어에서" : "스토어에서 보기 ↗"}</span>
+  </a>`).join("");
+
+document.getElementById("rail").innerHTML = meanings.map(m => `
+  <a class="mean" href="${store(m.no)}" target="_blank" rel="noopener">
+    <div class="k"><small>#</small>${esc(m.k)}</div>
+    <q>${esc(m.q)}</q>
+    <div class="for">${esc(m.f)}에게</div>
+    <div class="to">${esc(m.p)} ↗</div>
+  </a>`).join("");
+
+document.getElementById("cards").innerHTML = journal.map(j => j.type === "text" ? `
+  <a class="card text" href="${j.url}" target="_blank" rel="noopener">
+    <div class="src"><span class="mono">${j.src}</span><span class="mono">${j.date}</span></div>
+    <h3>${esc(j.t)}</h3>
+    <div class="foot"><p>${esc(j.d)}</p><span class="arr">↗</span></div>
+  </a>` : `
+  <a class="card photo" href="${j.url}" target="_blank" rel="noopener">
+    <div class="src"><span class="mono">${j.src}</span></div>
+    <img src="${j.img}" loading="lazy" alt="">
+    <div class="cap">${esc(j.cap)}</div>
+  </a>`).join("");
+</script>
+
+</body>
+</html>
